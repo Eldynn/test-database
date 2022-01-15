@@ -1,0 +1,23 @@
+{
+  "name": "test-database",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "console": "hasura console"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eldynn/test-database.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Eldynn/test-database/issues"
+  },
+  "homepage": "https://github.com/Eldynn/test-database#readme",
+  "devDependencies": {
+    "hasura-cli": "^2.1.1"
+  }
+}

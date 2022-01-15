@@ -1,0 +1,23 @@
+version: '3.6'
+services:
+  postgres:
+    image: postgres:13.5
+    restart: always
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: postgres
+
+  graphql-engine:
+    image: hasura/graphql-engine:latest
+    ports:
+      - "8080:8080"
+    depends_on:
+      - "postgres"
+    restart: always
+    environment:
+      HASURA_GRAPHQL_DATABASE_URL: postgres://postgres:postgres@postgres:5432/postgres
+      HASURA_GRAPHQL_ENABLE_CONSOLE: "false"
+
+volumes:
+  db_data: null
