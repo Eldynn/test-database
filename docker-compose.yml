@@ -9,12 +9,15 @@ services:
       POSTGRES_PASSWORD: postgres
 
   graphql-engine:
-    image: hasura/graphql-engine:latest
+    image: hasura/graphql-engine:v2.1.1.cli-migrations-v3
     ports:
       - "8080:8080"
     depends_on:
       - "postgres"
     restart: always
+    volumes:
+      - ./migrations:/hasura-migrations
+      - ./metadata:/hasura-metadata
     environment:
       HASURA_GRAPHQL_DATABASE_URL: postgres://postgres:postgres@postgres:5432/postgres
       HASURA_GRAPHQL_ENABLE_CONSOLE: "false"

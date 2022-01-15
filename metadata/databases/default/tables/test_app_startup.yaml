@@ -1,0 +1,3 @@
+table:
+  name: startup
+  schema: test_app

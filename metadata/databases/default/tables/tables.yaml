@@ -1,1 +1,7 @@
-[]
+- "!include test_app_entity.yaml"
+- "!include test_app_entrepreneur.yaml"
+- "!include test_app_request.yaml"
+- "!include test_app_response.yaml"
+- "!include test_app_score.yaml"
+- "!include test_app_startup.yaml"
+- "!include test_app_user.yaml"

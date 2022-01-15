@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "console": "hasura console"
+    "console": "hasura console",
+    "status": "hasura migrate status",
+    "squash": "./tools/squash.sh"
   },
   "repository": {
     "type": "git",
